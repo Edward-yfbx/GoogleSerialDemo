@@ -18,8 +18,8 @@ package com.google.serial.sample;
 
 import android.content.SharedPreferences;
 
-import com.google.serial.SerialPort;
-import com.google.serial.SerialPortFinder;
+import android.serialport.SerialPort;
+import android.serialport.SerialPortFinder;
 
 import java.io.File;
 import java.io.IOException;

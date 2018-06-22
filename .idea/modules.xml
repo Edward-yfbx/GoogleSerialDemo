@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GoogleSerial.iml" filepath="$PROJECT_DIR$/GoogleSerial.iml" />
+      <module fileurl="file://D:\WorkSpace\GoogleSerialDemo\GoogleSerial.iml" filepath="D:\WorkSpace\GoogleSerialDemo\GoogleSerial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GoogleSerialDemo.iml" filepath="$PROJECT_DIR$/GoogleSerialDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

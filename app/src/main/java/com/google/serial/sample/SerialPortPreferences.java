@@ -22,9 +22,10 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
 
+import android.serialport.SerialPortFinder;
+import android.util.Log;
+
 import com.google.serial.R;
-import com.google.serial.SerialPortFinder;
-import com.google.serial.sample.Application;
 
 
 public class SerialPortPreferences extends PreferenceActivity {

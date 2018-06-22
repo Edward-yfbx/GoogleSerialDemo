@@ -27,8 +27,8 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 
+import android.serialport.SerialPort;
 import com.google.serial.R;
-import com.google.serial.SerialPort;
 
 
 public abstract class SerialPortActivity extends Activity {

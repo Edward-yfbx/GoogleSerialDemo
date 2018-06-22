@@ -14,7 +14,9 @@
  * limitations under the License. 
  */
 
-package com.google.serial;
+package android.serialport;
+
+import android.util.Log;
 
 import java.io.File;
 import java.io.FileReader;
@@ -22,8 +24,6 @@ import java.io.IOException;
 import java.io.LineNumberReader;
 import java.util.Iterator;
 import java.util.Vector;
-
-import android.util.Log;
 
 public class SerialPortFinder {
 
