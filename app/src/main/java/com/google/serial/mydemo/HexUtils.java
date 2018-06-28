@@ -15,9 +15,34 @@ public class HexUtils {
                     "1100", "1101", "1110", "1111"};
 
     /**
-     * 将十六进制转换为二进制字节数组   16-2
+     * 转换为二进制字符串
      */
-    public static byte[] hexStr2BinArr(String hexString) {
+    public static String bytesToBinaryStr(byte[] bArray) {
+        String outStr = "";
+        int pos = 0;
+        for (byte b : bArray) {
+            //高四位
+            pos = (b & 0xF0) >> 4;
+            outStr += binaryArray[pos];
+            //低四位
+            pos = b & 0x0F;
+            outStr += binaryArray[pos];
+        }
+        return outStr;
+    }
+
+    /**
+     * 十六进制字符串转换为二进制字符串
+     * eg.0013-->00010011
+     */
+    public static String hexStrToBinaryStr(String hex) {
+        return bytesToBinaryStr(hexToByte(hex));
+    }
+
+    /**
+     * 十六进制转换为二进制字节数组
+     */
+    public static byte[] hexToByte(String hexString) {
         //hexString的长度对2取整，作为bytes的长度
         int len = hexString.length() / 2;
         byte[] bytes = new byte[len];
@@ -33,9 +58,9 @@ public class HexUtils {
     }
 
     /**
-     * 将二进制数组转换为十六进制字符串  2-16
+     * 二进制数组转换为十六进制字符串
      */
-    public static String bin2HexStr(byte[] bytes, int len) {
+    public static String byteToHex(byte[] bytes, int len) {
 
         String result = "";
         String hex = "";
@@ -47,5 +72,17 @@ public class HexUtils {
             result += hex;  //+" "
         }
         return result;
+    }
+
+    /**
+     * int 转byte[]
+     */
+    public static byte[] intToByte(int intValue) {
+        return new byte[]{
+                (byte) ((intValue >> 24) & 0xFF),
+                (byte) ((intValue >> 16) & 0xFF),
+                (byte) ((intValue >> 8) & 0xFF),
+                (byte) (intValue & 0xFF)
+        };
     }
 }
