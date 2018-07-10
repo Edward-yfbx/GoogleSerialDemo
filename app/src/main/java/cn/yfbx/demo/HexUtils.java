@@ -1,4 +1,4 @@
-package com.google.serial.mydemo;
+package cn.yfbx.demo;
 
 /**
  * @author :Reginer in  2018/3/28 9:19.
@@ -60,11 +60,11 @@ public class HexUtils {
     /**
      * 二进制数组转换为十六进制字符串
      */
-    public static String byteToHex(byte[] bytes, int len) {
+    public static String byteToHex(byte[] bytes) {
 
         String result = "";
         String hex = "";
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < bytes.length; i++) {
             //字节高4位
             hex = String.valueOf(hexStr.charAt((bytes[i] & 0xF0) >> 4));
             //字节低4位
